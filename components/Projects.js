@@ -4,18 +4,33 @@ import ProjectCard from "./ProjectCard";
 const FEATURED_WORK = [
   {
     title: "MJ Portal",
+    site: "https://mjportalgh.com",
     summary:
-      "Founder-led school and business portal work focused on digital administration, records, communication, and smoother operations.",
+      "A cloud-based School Management System developed to digitize and simplify school administration. It helps schools manage student records, academic results, attendance, fees, and communication through a secure, user-friendly dashboard.",
+  },
+  {
+    title: "B2B Company Limited",
+    site: "https://b2boptimumsolutions.com",
+    summary:
+      "A multi-service technology and business solutions company specializing in graphic design, branding, digital marketing, large-format printing, IT solutions, and logistics services.",
   },
   {
     title: "AfriConnect GH",
+    site: "https://afri-connect-gh.vercel.app/",
     summary:
-      "A Ghana-based venture connecting people, services, and opportunities through practical digital solutions.",
+      "A travel, relocation, and concierge service helping international visitors and newcomers navigate life in Ghana through tourism, accommodation, transfers, immigration support, business facilitation, and local guidance.",
   },
   {
-    title: "Client Projects",
+    title: "Perfecto Nova Plus Ventures",
+    site: "https://perfectonovaplus.com/",
     summary:
-      "A growing portfolio of websites, dashboards, and business tools built for real users, real clients, and real workflows.",
+      "A business management platform built to streamline daily operations with digital record-keeping, sales management, inventory tools, customer records, and business reporting.",
+  },
+  {
+    title: "Spenzmart",
+    site: "https://spenzmart.com",
+    summary:
+      "A modern multi-vendor e-commerce platform connecting buyers and sellers with secure authentication, product catalog management, online payments, order tracking, reviews, and admin tools.",
   },
 ];
 
@@ -53,24 +68,32 @@ export default async function Projects() {
           </div>
         </div>
 
-        {!projects || projects.length === 0 ? (
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {FEATURED_WORK.map((project) => (
-              <article
-                key={project.title}
-                className="rounded-md border border-line bg-panel p-6"
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {FEATURED_WORK.map((project) => (
+            <article
+              key={project.title}
+              className="rounded-md border border-line bg-panel p-6 transition-colors hover:border-amber-dim"
+            >
+              <p className="font-display text-xl font-semibold text-paper">
+                {project.title}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-muted">
+                {project.summary}
+              </p>
+              <a
+                href={project.site}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-ring mt-5 inline-block font-mono text-sm text-amber hover:underline"
               >
-                <p className="font-display text-xl font-semibold text-paper">
-                  {project.title}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
-                  {project.summary}
-                </p>
-              </article>
-            ))}
-          </div>
-        ) : (
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                visit site
+              </a>
+            </article>
+          ))}
+        </div>
+
+        {projects && projects.length > 0 && (
+          <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i} />
             ))}
