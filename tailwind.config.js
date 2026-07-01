@@ -19,9 +19,9 @@ module.exports = {
         signal: "#3D5A55",
       },
       fontFamily: {
-        display: ["var(--font-display)", "sans-serif"],
-        body: ["var(--font-body)", "sans-serif"],
-        mono: ["var(--font-mono)", "monospace"],
+        display: ["Space Grotesk", "Inter", "Segoe UI", "Arial", "sans-serif"],
+        body: ["Inter", "Segoe UI", "Arial", "sans-serif"],
+        mono: ["JetBrains Mono", "Consolas", "Menlo", "monospace"],
       },
       backgroundImage: {
         grain: "radial-gradient(circle at 1px 1px, rgba(242,239,233,0.04) 1px, transparent 0)",
