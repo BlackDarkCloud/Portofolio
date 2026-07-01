@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Quam Gbedjeha — Full-Stack Developer",
+  title: "Komi Julio - Entrepreneur and Full-Stack Developer",
   description:
-    "Full-stack developer in Ghana building production web platforms, e-commerce systems, and game server infrastructure.",
+    "Professional portfolio of Komi Julio, entrepreneur, full-stack developer, and founder of MJ Portal and AfriConnect GH in Accra, Ghana.",
 };
 
 export default function RootLayout({ children }) {

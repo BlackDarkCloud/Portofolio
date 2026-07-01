@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-2 font-mono text-sm">
           <span className="flex h-2.5 w-2.5 rounded-full bg-amber" aria-hidden="true" />
-          <span className="text-paper">~/quam</span>
+          <span className="text-paper">~/komi-julio</span>
         </a>
 
         <nav className="hidden items-center gap-8 font-mono text-sm text-muted md:flex">
@@ -63,7 +63,7 @@ export default function Navbar() {
             </a>
           ))}
           <a href="#contact" className="mt-2 block text-amber" onClick={() => setOpen(false)}>
-            let&rsquo;s build →
+            let&rsquo;s build
           </a>
         </nav>
       )}
